@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_20_064424) do
+ActiveRecord::Schema.define(version: 2021_12_09_220157) do
 
   create_table "posts", charset: "utf8mb4", force: :cascade do |t|
-    t.text "content"
+    t.text "comment"
     t.date "event_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "shop_name"
+    t.string "menu"
   end
 
 end
