@@ -1,10 +1,10 @@
 <div class="bg-light p-3 p-sm-5 mb-4 border-top">
   <div class="container">
-    <h1 class="display-4">おいしいもの食べていこう！</h1>
+    <h1 class="display-4">おいしいもの食べよう！</h1>
     <p class="lead">個人開発のアウトプットです。</p>
     <hr class="my-4">
-    <p>このサイトはおいしいものを記録として溜めていくサイトです。</p>
-    <a class="btn btn-info btn-lg" href="#" role="button">溜めていく</a>
+    <p>このサイトはおいしかったものを記録していくサイトです。</p>
+    <a class="btn btn-info btn-lg" href="#" role="button">投稿する</a>
   </div>
 </div>
 <div class="container mt-2">
@@ -14,7 +14,9 @@
     <thead>
       <tr>
         <th scope="col">No.</th>
-        <th scope="col">記事</th>
+        <th scope="col">店名</th>
+        <th scope="col">メニュー</th>
+        <th scope="col">コメント</th>
         <th scope="col">食べた日</th>
       </tr>
     </thead>
@@ -22,7 +24,9 @@
       <% @posts.each do |post| %>
       <tr>
         <td><%= post.id %></td>
-        <td><%= post.content %></td>
+        <td><%= post.shop_name %></td>
+        <td><%= post.menu %></td>
+        <td><%= post.comment %></td>
         <td><%= post.event_date %></td>
       </tr>
       <% end %>
