@@ -10,7 +10,11 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(event_date: "DESC")
+  end
+
+  def show
+    @post =Post.find(params[:id])
   end
 
   def edit
