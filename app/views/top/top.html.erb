@@ -1,36 +1,34 @@
-<div class="bg-light p-3 p-sm-5 mb-4 border-top">
-  <div class="container">
-    <h1 class="display-4">おいしいもの食べよう！</h1>
+<div class="bg-light p-3 p-sm-5 px-5 mb-4 border-top">
+    <h1 class="display-4">おいしいもの食べよう。</h1>
     <p class="lead">個人開発のアウトプットです。</p>
     <hr class="my-4">
     <p>このサイトはおいしかったものを記録していくサイトです。</p>
-    <a class="btn btn-info btn-lg" href="#" role="button">投稿する</a>
-  </div>
+    <%= link_to "投稿する" , new_path , class:"btn btn-info" %>
 </div>
-<div class="container mt-2">
-  <h1>食べたログ</h1>
-  <p>最新の投稿</p>
-	<table class="table">
+<div class="mx-5">
+  <h4 class="my-4">最新の投稿</h4>
+	<table class="table table-light table-striped table-responsive-lg">
     <thead>
       <tr>
-        <th scope="col">No.</th>
+        <th scope="col">#</th>
+        <th scope="col">食べた日</th>
         <th scope="col">店名</th>
         <th scope="col">メニュー</th>
         <th scope="col">コメント</th>
-        <th scope="col">食べた日</th>
       </tr>
     </thead>
     <tbody>
       <% @posts.each do |post| %>
       <tr>
         <td><%= post.id %></td>
+        <td><%= post.event_date %></td>
         <td><%= post.shop_name %></td>
         <td><%= post.menu %></td>
         <td><%= post.comment %></td>
-        <td><%= post.event_date %></td>
       </tr>
       <% end %>
     </tbody>
   </table>
 </div>
+
 
