@@ -1,27 +1,29 @@
+
 <div class="mt-4 container">
   <h1 class="h3 my-3">新規投稿画面</h1>
-  <div class="row my-2">
-    <div class="col-md-3">
-      <label for="inputEventDate" class="form-label">食べた日</label>
-      <input type="text" class="form-control" placeholder="2020/01/01" aria-label="食べた日">
+  <%= form_with(model: @post, local: true) do |form| %>
+    <div class="row my-2">
+      <div class="col-md-3">
+        <%= form.label :食べた日, class:'form-label' %>
+        <%= form.text_field :event_date , class: "form-control", placeholder: "2020/01/01" %>
+      </div>
     </div>
-  </div>
-  <div class="row g-3 my-2">
-    <div class="col-md-4">
-      <label for="inputShopName" class="form-label">店名</label>
-      <input type="text" class="form-control" placeholder="お店の名前" aria-label="お店の名前">
+    <div class="row g-3 my-2">
+      <div class="col-md-4">
+        <%= form.label :店名, class:'form-label' %>
+        <%= form.text_field :shop_name , class: "form-control", placeholder: "お店の名前" %>
+      </div>
+      <div class="col-md-4">
+        <%= form.label :メニュー, class:'form-label' %>
+        <%= form.text_field :menu , class: "form-control", placeholder: "食べたもの" %>
+      </div>
+      <div class="my-3 col-md-8">
+        <%= form.label :コメント, class:'form-label' %>
+        <%= form.text_area :comment , class: "form-control", placeholder: "感想を書いてね", rows:3 %>
+      </div>
     </div>
-    <div class="col-md-4">
-      <label for="inputMenu" class="form-label">メニュー</label>
-      <input type="text" class="form-control" placeholder="食べたもの" aria-label="食べたもの">
+    <div>
+      <%= form.submit '投稿する',class: "btn btn-info" %>
     </div>
-    <div class="my-3 col-md-8">
-      <label for="commentTextarea" class="form-label">コメント</label>
-      <textarea class="form-control" id="commentTextarea" placeholder="感想を入力" 
-                aria-label="感想を入力" rows="3"></textarea>
-    </div>
-  </div>
-  <div>
-    <button type="submit" class="btn btn-info">投稿する</button>
-  </div>
+  <% end %>
 </div>
