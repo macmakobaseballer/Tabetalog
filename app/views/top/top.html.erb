@@ -7,8 +7,8 @@
 </div>
 <div class="mx-5">
   <h4 class="my-4">最新の投稿</h4>
-	<table class="table table-light table-striped table-responsive-lg">
-    <thead>
+	<table class="table table-responsive-lg">
+    <thead class="table-secondary">
       <tr>
         <th scope="col">#</th>
         <th scope="col">食べた日</th>
@@ -17,7 +17,7 @@
         <th scope="col">コメント</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="table-light">
       <% @posts.each do |post| %>
       <tr>
         <td><%= post.id %></td>
