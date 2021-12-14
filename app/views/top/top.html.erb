@@ -4,6 +4,7 @@
     <hr class="my-4">
     <p>このサイトはおいしかったものを記録していくサイトです。</p>
     <%= link_to "投稿する" , new_path , class:"btn btn-info" %>
+    <%= link_to "一覧表示" , posts_path , class:"btn btn-success mx-3" %>    
 </div>
 <div class="mx-5">
   <h4 class="my-4">最新の投稿</h4>
@@ -15,6 +16,8 @@
         <th scope="col">店名</th>
         <th scope="col">メニュー</th>
         <th scope="col">コメント</th>
+        <th scope="col"></th>
+
       </tr>
     </thead>
     <tbody class="table-light">
@@ -25,6 +28,8 @@
         <td><%= post.shop_name %></td>
         <td><%= post.menu %></td>
         <td><%= post.comment %></td>
+        <td><%= link_to :詳細, post_path(post.id) , class:"btn btn-outline-secondary btn-sm" %></td>
+
       </tr>
       <% end %>
     </tbody>
