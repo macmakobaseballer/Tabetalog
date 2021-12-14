@@ -27,6 +27,12 @@ class PostsController < ApplicationController
     redirect_to post_path
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
+  end
+
   #StrongParametersの実装
   # 外部から渡されるパラメータをそのまま信用せず、
   # 明示的に許可したキーのみ利用する
