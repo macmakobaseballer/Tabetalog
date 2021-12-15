@@ -1,4 +1,4 @@
-<div class="p-3 p-sm-5 px-5 mb-4 border-top" style="background-color:#fff9f5">
+<div class="ps-4 py-5 border-top" style="background-color:#fff9f5">
     <h1 class="display-4">おいしいもの食べよう。</h1>
     <p class="lead">個人開発のアウトプットです。</p>
     <hr class="my-4">
@@ -6,18 +6,17 @@
     <%= link_to "投稿する" , new_path , class:"btn btn-info" %>
     <%= link_to "一覧表示" , posts_path , class:"btn btn-success mx-3" %>    
 </div>
-<div class="mx-5">
+<div class="mx-4">
   <h4 class="my-4">最新の投稿</h4>
 	<table class="table table-responsive-lg">
     <thead class="table-secondary">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">食べた日</th>
-        <th scope="col">店名</th>
-        <th scope="col">メニュー</th>
-        <th scope="col">コメント</th>
-        <th scope="col"></th>
-
+        <th scope="col" style="width: 3%">#</th>
+        <th scope="col" style="width: 10%">食べた日</th>
+        <th scope="col" style="width: 18%">店名</th>
+        <th scope="col" style="width: 24%">メニュー</th>
+        <th scope="col" style="width: 40%">コメント</th>
+        <th scope="col" style="width: 5%"></th>
       </tr>
     </thead>
     <tbody class="table-light">

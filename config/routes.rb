@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/new'
-  get '/' => "top#top"
-
+  root 'top#top'
+  get '/signup' => 'users#new'
   # get 'posts/show'
   # get 'posts/create'
   # get 'posts/edit'
