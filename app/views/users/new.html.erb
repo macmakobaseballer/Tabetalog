@@ -1,4 +1,33 @@
-<div class="ps-4 py-5 border-top">
+<div class="ps-5 pt-3 border-top">
   <% provide(:title, 'Sign up') %>
   <h1>Sign up</h1>
     <p>登録フォームはこちら</p>
+</div>
+  <div class="mt-4 container">
+    <%= form_with(model: @user, local: true) do |form| %>
+      <%= render 'shared/error_messages' %>
+      <div>
+        <div class="my-2 col-md-5">
+          <%= form.label :ユーザー名, class:'form-label' %>
+          <%= form.text_field :name , class: "form-control", placeholder: "例）山田太郎" %>
+        </div>
+      </div>
+      <div>
+        <div class="my-4 col-md-6">
+          <%= form.label :メールアドレス, class:'form-label' %>
+          <%= form.email_field :email , class: "form-control", placeholder: "abc@tabetalog.com" %>
+        </div>
+        <div class="my-4 col-md-6">
+          <%= form.label :パスワード, class:'form-label' %>
+          <%= form.password_field :password , class: "form-control", placeholder: "パスワードを入力してください" %>
+        </div>
+        <div class="my-4 col-md-6">
+          <%= form.label :パスワード（確認）, class:'form-label' %>
+          <%= form.password_field :password_confirmation , class: "form-control", placeholder: "確認のためもう一度入力してください" %>
+        </div>
+      </div>
+      <div>
+        <%= form.submit '登録する',class: "btn btn-info m-4" %>
+      </div>
+    <% end %>
+  </div>

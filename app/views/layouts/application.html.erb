@@ -42,6 +42,13 @@
         </div>
       </div>
     </nav>
+    <div class="container mt-4">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
     <%= yield %>
+    <div class="alert alert-secondary my-4" role="alert">
+      <%= debug(params) if Rails.env.development?  %>
+    </div>
   </body>
 </html>
