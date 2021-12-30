@@ -1,0 +1,25 @@
+<div class="mx-4">
+  <h4 class="my-4">一覧表示</h4>
+	<table class="table table-responsive-lg">
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col">食べた日</th>
+        <th scope="col">店名</th>
+        <th scope="col">メニュー</th>
+        <th scope="col">コメント</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody class="table-light">
+      <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.event_date %></td>
+        <td><%= post.shop_name %></td>
+        <td><%= post.menu %></td>
+        <td><%= post.comment %></td>
+        <td><%= link_to :詳細, post_path(post.id) , class:"btn btn-outline-secondary btn-sm" %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
