@@ -1,13 +1,14 @@
-<div class="ps-5 pt-3">
   <% provide(:title, 'Sign up') %>
-  <h1>Sign up</h1>
-    <p>登録フォームはこちら</p>
-</div>
+
   <div class="mt-4 container">
+    <div class="pt-3">
+      <h1>Sign up</h1>
+      <p>登録フォームはこちら</p>
+    </div>
     <%= form_with(model: @user, local: true) do |form| %>
       <%= render 'shared/error_messages' %>
       <div>
-        <div class="my-2 col-md-5">
+        <div class="my-4 col-md-5">
           <%= form.label :ユーザー名, class:'form-label' %>
           <%= form.text_field :name , class: "form-control", placeholder: "例）山田太郎" %>
         </div>
@@ -27,7 +28,7 @@
         </div>
       </div>
       <div>
-        <%= form.submit '登録する',class: "btn btn-info m-4" %>
+        <%= form.submit '登録する',class: "btn btn-info my-3" %>
       </div>
     <% end %>
   </div>
