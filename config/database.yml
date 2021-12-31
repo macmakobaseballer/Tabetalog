@@ -51,6 +51,7 @@ test:
 #
 production:
   <<: *default
-  database: tabetalog_production
-  username: tabetalog
-  password: <%= ENV['TABETALOG_DATABASE_PASSWORD'] %>
+  database: tabetalog
+  host: <%= ENV['DATABASE_HOST'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
