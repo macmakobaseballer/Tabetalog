@@ -20,8 +20,8 @@
       <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
-    <div class="alert alert-secondary my-4" role="alert">
-      <%= debug(params) if Rails.env.development?  %>
+    <div>
+      <%= debug(params) if Rails.env.development? , class: 'alert alert-secondary my-4'%>
     </div>
   </body>
 </html>
