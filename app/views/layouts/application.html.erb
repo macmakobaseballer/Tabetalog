@@ -19,9 +19,11 @@
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
     <%= yield %>
+    <!-- debug_log 
     <%= render 'layouts/footer' %>
     <div>
       <%= debug(params) if Rails.env.development? %>
     </div>
+    -->
   </body>
 </html>
